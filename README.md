@@ -31,8 +31,8 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/kedabdure/noteapp.git
-    cd noteapp
+    git clone https://github.com/kedabdure/NoteApp.git
+    cd NoteApp
     ```
 
 2. **Create a virtual environment**:
