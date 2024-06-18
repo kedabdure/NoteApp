@@ -31,7 +31,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/noteapp.git
+    git clone https://github.com/kedabdure/noteapp.git
     cd noteapp
     ```
 
