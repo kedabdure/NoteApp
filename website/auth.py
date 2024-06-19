@@ -1,4 +1,7 @@
-from flask import Blueprint, render_template, request, flash
+from flask import Blueprint, render_template, request, flash, redirect, url_for
+from .models import User
+from . import db
+from werkzoug import generate_password_hash, check_password_hash
 
 auth = Blueprint('auth', __name__)
 
@@ -45,10 +48,10 @@ def sign_up():
         elif password1 != password2:
             flash('Passwords do not match', category='error')
         else:
+            new_user = User(email=email, first_name=name, password=generate_password_hash(password1), methods='sha256')
+            db.session.add(new_user)
+            db.session.commit()
             flash('Account successfully created!', category='success')
-            # Perform additional actions such as saving the user to the database
-            # return redirect(url_for('home'))
-        print("Name from form:", name)
-
+            return redirect(url_for('views.home'))
 
     return render_template('sign_up.html')
