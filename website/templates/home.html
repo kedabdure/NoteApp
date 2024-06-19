@@ -9,6 +9,9 @@
             {% for note in user.notes %}
                 <div class="card mb-3">
                     <div class="card-body">
+                        <button class="close" type="button" onclick="deleteNote({{ note.id }})">
+                            <span aria-hidden="true">&times;</span>
+                        </button>                        
                         <p class="card-text">{{ note.data }}</p>
                         <p class="card-text"><small class="text-muted">Created on {{ note.date.strftime('%Y-%m-%d %H:%M:%S') }}</small></p>
                     </div>
@@ -18,8 +21,8 @@
         <form action="" method="POST" class="form-group mt-4">
             <textarea name="note" id="note" class="form-control" placeholder="Enter your note..." rows="3"></textarea>
             <br>
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-primary" type="submit">Save</button>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-primary" style="width: 10%;" type="submit">Save</button>
             </div>
         </form>
     </div>
