@@ -9,6 +9,7 @@
           class="form-control"
           id="email"
           name="email"
+          value="{{ request.form.get('email', '') }}"
           placeholder="Enter email"
         />
       </div>
@@ -19,6 +20,7 @@
           class="form-control"
           id="password"
           name="password"
+          value="{{ request.form.get('password', '') }}"
           placeholder="Enter password"
         />
       </div>

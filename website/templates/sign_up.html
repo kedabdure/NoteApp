@@ -9,6 +9,7 @@
           class="form-control"
           id="email"
           name="email"
+          value="{{ request.form.get('email', '') }}"
           placeholder="Enter email"
         />
       </div>
@@ -19,6 +20,7 @@
           class="form-control"
           id="firstName"
           name="firstName"
+          value="{{ request.form.get('firstName', '') }}"
           placeholder="Enter first name"
         />
       </div>
@@ -29,6 +31,7 @@
           class="form-control"
           id="password1"
           name="password1"
+          value="{{ request.form.get('password1', '') }}"
           placeholder="Enter password"
         />
       </div>
@@ -39,6 +42,7 @@
           class="form-control"
           id="password2"
           name="password2"
+          value="{{ request.form.get('password2', '') }}"
           placeholder="Confirm password"
         />
       </div>

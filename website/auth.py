@@ -9,8 +9,8 @@ def login():
         email = data.get('email')
         password = data.get('password')
 
-        if not email or len(email) < 3:
-            flash('Email must be greater than 3 characters', category='error')
+        if not email or len(email) < 4:
+            flash('Email must be greater than 4 characters', category='error')
         elif not password or len(password) < 4:
             flash('Password must be greater than 4 characters', category='error')
         else:
