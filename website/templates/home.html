@@ -9,9 +9,9 @@
             {% for note in user.notes %}
                 <div class="card mb-3">
                     <div class="card-body">
-                        <button class="close" type="button" onclick="deleteNote({{ note.id }})">
+                        <button class="close" type="button" onclick="deleteNote('{{ note.id }}')">
                             <span aria-hidden="true">&times;</span>
-                        </button>                        
+                        </button>
                         <p class="card-text">{{ note.data }}</p>
                         <p class="card-text"><small class="text-muted">Created on {{ note.date.strftime('%Y-%m-%d %H:%M:%S') }}</small></p>
                     </div>
